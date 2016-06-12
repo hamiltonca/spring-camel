@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<beans:beans xmlns="http://camel.apache.org/schema/spring" xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+          http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+          http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+          ">
+
+  <camelContext id="main-context">
+    <route id="ping">
+      <from uri="servlet:///ping" />
+      <setHeader headerName="Exchange.HTTP_RESPONSE_CODE">
+        <constant>200</constant>
+      </setHeader>
+      <setHeader headerName="Exchange.CONTENT_TYPE">
+        <constant>text/plain</constant>
+      </setHeader>
+      <setBody>
+        <simple>Camel OK\n</simple>
+      </setBody>
+      <convertBodyTo type="java.lang.String" charset="UTF-8" />
+      <setHeader headerName="Exchange.CONTENT_LENGTH">
+        <simple>${body.length}</simple>
+      </setHeader>
+      <to uri="log:com.compucafe.route.ping?showAll=true&amp;multiline=true"/>
+    </route>
+  </camelContext>
+</beans:beans>
