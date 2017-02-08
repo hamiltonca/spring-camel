@@ -6,6 +6,7 @@
           ">
 
   <camelContext id="main-context">
+    <propertyPlaceholder id="properties" location="classpath:spring-camel.properties"/>
     <route id="ping">
       <from uri="servlet:///ping" />
       <setHeader headerName="Exchange.HTTP_RESPONSE_CODE">
@@ -15,7 +16,7 @@
         <constant>text/plain</constant>
       </setHeader>
       <setBody>
-        <simple>Camel OK\n</simple>
+        <simple>Camel OK\nProperty ${properties:aValue:NOT_SET}\nAnother {{aValue}}\n</simple>
       </setBody>
       <convertBodyTo type="java.lang.String" charset="UTF-8" />
       <setHeader headerName="Exchange.CONTENT_LENGTH">

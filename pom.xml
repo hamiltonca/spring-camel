@@ -8,8 +8,9 @@
   <name>spring-camel Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
-    <spring.version>4.2.4.RELEASE</spring.version>
-    <camel-version>2.16.2</camel-version>
+    <spring.version>4.2.5.RELEASE</spring.version>
+    <camel.version>2.16.2</camel.version>
+    <groovy.version>2.4.8</groovy.version>
   </properties>
   <dependencies>
 
@@ -57,54 +58,54 @@
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-core</artifactId>
-      <version>2.16.1</version>
+      <version>${camel.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-spring</artifactId>
-      <version>2.16.1</version>
+      <version>${camel.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-jackson</artifactId>
-      <version>2.16.1</version>
+      <version>${camel.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-groovy</artifactId>
-      <version>2.16.1</version>
+      <version>${camel.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-servlet</artifactId>
-      <version>2.16.1</version>
+      <version>${camel.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-quartz</artifactId>
-      <version>2.16.1</version>
+      <version>${camel.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-velocity</artifactId>
-      <version>2.16.1</version>
+      <version>${camel.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-http4</artifactId>
-      <version>2.16.1</version>
+      <version>${camel.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-jmx</artifactId>
-      <version>2.16.1</version>
+      <version>${camel.version}</version>
     </dependency>
 
 		<!-- All the groovy goodness... -->
     <dependency>
       <groupId>org.codehaus.groovy</groupId>
       <artifactId>groovy-all</artifactId>
-      <version>2.4.5</version>
+      <version>${groovy.version}</version>
     </dependency>
 
     <dependency>

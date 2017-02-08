@@ -8,6 +8,7 @@
 
   <context:component-scan base-package="com.compucafe.casp.con" />
   <mvc:annotation-driven />
+  <context:property-placeholder ignore-unresolvable="true" location="classpath:/spring-camel.properties" local-override="true"/>
   <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
     <property name="prefix" value="/WEB-INF/jsp/" />
