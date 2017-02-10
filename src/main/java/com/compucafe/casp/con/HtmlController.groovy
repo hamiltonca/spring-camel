@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod
 @Controller
 class HtmlController {
 	
-	@RequestMapping(value="/hello/{user}", method=RequestMethod.GET, produces="text/html") 
+	@RequestMapping(value='/hello/{user}', method=RequestMethod.GET, produces='text/html') 
 	public String sayHello(@PathVariable String user, Model model) {
 		model.addAttribute('userId', user)
 		return 'hello'
