@@ -19,10 +19,10 @@
       <artifactId>spring-core</artifactId>
       <version>${spring.version}</version>
       <exclusions>
-         <exclusion>
-           <groupId>commons-logging</groupId>
-           <artifactId>commons-logging</artifactId>
-         </exclusion>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>
     <dependency>
@@ -104,10 +104,10 @@
       <artifactId>camel-servlet</artifactId>
       <version>${camel.version}</version>
       <exclusions>
-         <exclusion>
-           <groupId>commons-logging</groupId>
-           <artifactId>commons-logging</artifactId>
-         </exclusion>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>
     <dependency>
@@ -125,10 +125,10 @@
       <artifactId>camel-http4</artifactId>
       <version>${camel.version}</version>
       <exclusions>
-         <exclusion>
-           <groupId>commons-logging</groupId>
-           <artifactId>commons-logging</artifactId>
-         </exclusion>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>
     <dependency>
@@ -159,6 +159,11 @@
       <artifactId>javax.servlet.jsp.jstl-api</artifactId>
       <version>1.2.1</version>
     </dependency>
+    <dependency>
+      <groupId>javax.servlet.jsp.jstl</groupId>
+      <artifactId>jstl-api</artifactId>
+      <version>1.2</version>
+    </dependency>
 
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -169,7 +174,7 @@
       <groupId>org.slf4j</groupId>
       <artifactId>jcl-over-slf4j</artifactId>
       <version>1.7.21</version>
-    </dependency>    
+    </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-core</artifactId>
