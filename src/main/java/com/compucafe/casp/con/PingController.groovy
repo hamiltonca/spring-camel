@@ -9,9 +9,23 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseBody
 
 import groovy.util.logging.Slf4j
+
+/**
+ * PingContoller <br/>
+ * A simple Text controller that returns a text string
+ * as the HTTP response.
+ * 
+ * Note that part of this the controllers demonstration is the 
+ * property replacement used with the @Value annotations.
+ * 
+ * Values are replaced using the spring-camel.properties file in src/main/resources.
+ * 
+ */
+
 @Slf4j
 @Controller
 class PingController {
+	
 	@Value('${aStrValue:NOT_SET}')
 	String aStrValue
   

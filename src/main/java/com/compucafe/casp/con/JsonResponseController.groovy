@@ -6,7 +6,11 @@ import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.ResponseBody
 
 import groovy.json.JsonBuilder
-
+/**
+ * JsonResponseController <br/>
+ * Returns a simple JSON respone using a JsonBuilder using a closure.
+ * 
+ */
 @Controller
 class JsonResponseController {
 

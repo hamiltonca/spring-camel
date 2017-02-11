@@ -13,3 +13,9 @@ Camel is accessed using the camel servlet and the base path to access it is /ser
 The project is currently configured to use Spring 4.2.5.RELEASE and Apache Camel 2.15.5.
 
 Other support libraries are used, please review the project object model (pom.xml) for further detail.
+
+The project has been developed using Eclipse Neon and should be easily imported into Eclipse provided you have the necessary plug-ins.
+* Eclipse Neon J2EE Distribution 
+* Apache Groovy Compiler Plugin (http://dist.springsource.org/snapshot/GRECLIPSE/e4.6/)
+* Spring Tool Suite (http://dist.springsource.com/release/TOOLS/update/e4.6/)
+* Gradle (Buildship http://download.eclipse.org/buildship/updates/e46/releases/2.x)
