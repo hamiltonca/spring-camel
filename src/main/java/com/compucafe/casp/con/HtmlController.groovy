@@ -1,5 +1,6 @@
 package com.compucafe.casp.con
 
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.PathVariable
@@ -17,9 +18,17 @@ import org.springframework.web.bind.annotation.RequestMethod
 @Controller
 class HtmlController {
 	
+  @Value('${anIntValue:-2}')
+  Integer aValue
+
+  @Value('${aStrValue:initialized by controller.}')
+  String aStrValue
+  
 	@RequestMapping(value='/hello/{user}', method=RequestMethod.GET, produces='text/html') 
 	public String sayHello(@PathVariable String user, Model model) {
 		model.addAttribute('userId', user)
+    model.addAttribute('anIntValue', aValue)
+    model.addAttribute('aStrValue',aStrValue)
 		return 'hello'
 	}
 }

@@ -16,7 +16,7 @@
         <constant>text/plain</constant>
       </setHeader>
       <setBody>
-        <simple>Camel OK\nProperty ${properties:aStrValue:NOT_SET}\nAnother {{aStrValue}}\n</simple>
+        <simple>Camel OK\nProperty [${properties:aStrValue:NOT_SET}]\nAnother [{{aStrValue}}]\nAn Integer value: [{{anIntValue}}], Using new Camel property syntax [${properties:anIntValue:0}]</simple>
       </setBody>
       <convertBodyTo type="java.lang.String" charset="UTF-8" />
       <setHeader headerName="Exchange.CONTENT_LENGTH">

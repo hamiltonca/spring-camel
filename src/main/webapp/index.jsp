@@ -26,7 +26,8 @@ h1 {
 			<tr>
 				<td>
 					<ul>
-						<li><a href="/spring/ping">Text example 'ping'</a></li>
+						<li><a href="/spring/ping">Text example 'ping' with Integer @Value annotation value returned.</a></li>
+						<li><a href="/spring/hello/chris">Hello HTML/JSP example with path variable (chris) and int @Value annotation value returned. </a>
 						<li><a href="/spring/json">Json example (returns JSON)</a></li>
 						<li><a href="/services/ping">Camel text example 'ping'</a></li>
 					</ul>

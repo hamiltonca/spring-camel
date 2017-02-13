@@ -1,5 +1,6 @@
 package com.compucafe.casp.con
 
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
@@ -14,6 +15,11 @@ import groovy.json.JsonBuilder
 @Controller
 class JsonResponseController {
 
+  @Value('${aStrValue:initialized by controller.}')
+  String aStrValue
+  @Value('${anIntValue:0}')
+  Integer anIntValue
+  
 	@RequestMapping (value='/json', produces='application/json', method = [RequestMethod.GET,RequestMethod.POST] )
 	@ResponseBody String getJsonMessage(){
 		JsonBuilder bldr = new JsonBuilder()
@@ -21,6 +27,7 @@ class JsonResponseController {
 			message  'Hello world'
 			mapData {
 				item  'hello'
+        itemDescription aStrValue 
 			}
 			anotherMap {
 				something 'anothervalue'
@@ -36,6 +43,7 @@ class JsonResponseController {
 				'BBB',
 				'CCC'
 				)
+      'anIntValue' anIntValue
 		}
 		//String retVal = '{ "message":"Hello world" }'
 		return bldr.toPrettyString()

@@ -5,5 +5,7 @@
 <body>
 <h2>Hello World!</h2>
 <div>Hello ${userId}</div>
+<div>aIntValue: ${anIntValue}</div>
+<div>aStrValue: ${aStrValue}</div>
 </body>
 </html>
