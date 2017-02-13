@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod
 class HtmlController {
 	
   @Value('${anIntValue:-2}')
-  Integer aValue
+  Integer aValue = -1
 
   @Value('${aStrValue:initialized by controller.}')
   String aStrValue

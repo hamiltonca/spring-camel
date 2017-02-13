@@ -18,7 +18,7 @@ class JsonResponseController {
   @Value('${aStrValue:initialized by controller.}')
   String aStrValue
   @Value('${anIntValue:0}')
-  Integer anIntValue
+  Integer anIntValue = -1 
   
 	@RequestMapping (value='/json', produces='application/json', method = [RequestMethod.GET,RequestMethod.POST] )
 	@ResponseBody String getJsonMessage(){
@@ -45,7 +45,6 @@ class JsonResponseController {
 				)
       'anIntValue' anIntValue
 		}
-		//String retVal = '{ "message":"Hello world" }'
 		return bldr.toPrettyString()
 	}
 }
